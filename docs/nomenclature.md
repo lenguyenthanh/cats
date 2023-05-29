@@ -16,14 +16,14 @@ _WARNING_: this page is written manually, and not automatically generated, so ma
 
 | Type          | Method Name  |
 | ------------- |--------------|
-| `F[A] => F[Unit]`  | `[void](https://www.javadoc.io/doc/org.typelevel/cats-docs_2.13/latest/cats/Functor.html#void[A](fa:F[A]):F[Unit])`   |
-| `F[A] => B => F[B]`  | `[as](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#as[A,B](fa:F[A],b:B):F[B])`   |
-| `F[A] => (A => B) => F[B]` | `[map](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#map[A,B](fa:F[A])(f:A=%3EB):F[B])`   |
-| `F[A] => (A => B) => F[(A,B)]` | `[fproduct]`   |
-| `F[A] => (A => B) => F[(B,A)]` | `[fproductLeft]`   |
-| `F[A] => B => F[(B, A)]`  | `[tupleLeft]`  |
-| `F[A] => B => F[(A, B)]`  | `[tupleRight]` |
-| `(A => B) => (F[A] => F[B])` | `[lift]`   |
+| `F[A] => F[Unit]`  | [void](https://www.javadoc.io/doc/org.typelevel/cats-docs_2.13/latest/cats/Functor.html#void[A](fa:F[A]):F[Unit])   |
+| `F[A] => B => F[B]`  | [as](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#as[A,B](fa:F[A],b:B):F[B])   |
+| `F[A] => (A => B) => F[B]` | [map](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#map[A,B](fa:F[A])(f:A=%3EB):F[B])   |
+| `F[A] => (A => B) => F[(A,B)]` | [fproduct](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#fproduct[A,B](fa:F[A])(f:A=%3EB):F[(A,B)])   |
+| `F[A] => (A => B) => F[(B,A)]` | [fproductLeft](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#fproductLeft[A,B](fa:F[A])(f:A=%3EB):F[(B,A)])   |
+| `F[A] => B => F[(B, A)]`  | [tupleLeft](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#tupleLeft[A,B](fa:F[A],b:B):F[(B,A)])  |
+| `F[A] => B => F[(A, B)]`  | [tupleRight](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#tupleRight[A,B](fa:F[A],b:B):F[(A,B)]) |
+| `(A => B) => (F[A] => F[B])` | [lift](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#lift[A,B](f:A=%3EB):F[A]=%3EF[B])   |
 
 ### Apply
 
