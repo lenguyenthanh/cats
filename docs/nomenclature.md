@@ -16,39 +16,39 @@ _WARNING_: this page is written manually, and not automatically generated, so ma
 
 | Type          | Method Name  |
 | ------------- |--------------|
-| `F[A] => F[Unit]`  | [void](https://www.javadoc.io/doc/org.typelevel/cats-docs_2.13/latest/cats/Functor.html#void[A](fa:F[A]):F[Unit])   |
-| `F[A] => B => F[B]`  | [as](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#as[A,B](fa:F[A],b:B):F[B])   |
-| `F[A] => (A => B) => F[B]` | [map](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#map[A,B](fa:F[A])(f:A=%3EB):F[B])   |
-| `F[A] => (A => B) => F[(A,B)]` | [fproduct](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#fproduct[A,B](fa:F[A])(f:A=%3EB):F[(A,B)])   |
-| `F[A] => (A => B) => F[(B,A)]` | [fproductLeft](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#fproductLeft[A,B](fa:F[A])(f:A=%3EB):F[(B,A)])   |
-| `F[A] => B => F[(B, A)]`  | [tupleLeft](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#tupleLeft[A,B](fa:F[A],b:B):F[(B,A)])  |
-| `F[A] => B => F[(A, B)]`  | [tupleRight](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#tupleRight[A,B](fa:F[A],b:B):F[(A,B)]) |
-| `(A => B) => (F[A] => F[B])` | [lift](https://www.javadoc.io/static/org.typelevel/cats-docs_2.13/2.9.0/cats/Functor.html#lift[A,B](f:A=%3EB):F[A]=%3EF[B])   |
+| `F[A] => F[Unit]`  | [void](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)   |
+| `F[A] => B => F[B]`  | [as](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)   |
+| `F[A] => (A => B) => F[B]` | [map](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)   |
+| `F[A] => (A => B) => F[(A,B)]` | [fproduct](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)   |
+| `F[A] => (A => B) => F[(B,A)]` | [fproductLeft](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)   |
+| `F[A] => B => F[(B, A)]`  | [tupleLeft](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)  |
+| `F[A] => B => F[(A, B)]`  | [tupleRight](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb) |
+| `(A => B) => (F[A] => F[B])` | [lift](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)   |
 
 ### Apply
 
 | Type          | Method Name | Symbol   |
 | ------------- |--------------|------------|
-| `F[A] => F[B] => F[A]` | `[productL]`  | `<*`
-| `F[A] => F[B] => F[B]` | `[productR]`  | `*>`
-| `F[A] => F[B] => F[(A,B)]` | `[product]`  |
-| `F[A => B] => F[A] => F[B]` | `[ap]`  |  `<*>`
-| `F[A => B => C] => F[A] => F[B] => F[C]` | `[ap2]`  |
-| `F[A] => F[B] => (A => B => C) => F[C]` | `[map2]` |
+| `F[A] => F[B] => F[A]` | [productL](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)  | `<*`
+| `F[A] => F[B] => F[B]` | [productR](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)  | `*>`
+| `F[A] => F[B] => F[(A,B)]` | [product](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)  |
+| `F[A => B] => F[A] => F[B]` | [ap](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)  |  `<*>`
+| `F[A => B => C] => F[A] => F[B] => F[C]` | [ap2](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)  |
+| `F[A] => F[B] => (A => B => C) => F[C]` | [map2](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb) |
 
 ### Applicative
 
 | Type          | Method Name | Notes   |
 | ------------- |--------------|------------|
-| `A => F[A]`   | `[pure]` |
-| `=> F[Unit]`  | `[unit]` |
-| `Boolean => F[Unit] => F[Unit]` | `[whenA]`   | Performs effect iff condition is true
-|                                 | `[unlessA]` | Adds effect iff condition is false
+| `A => F[A]`   | [pure](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb) |
+| `=> F[Unit]`  | [unit](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb) |
+| `Boolean => F[Unit] => F[Unit]` | [whenA](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb)   | Performs effect iff condition is true
+|                                 | [unlessA](https://www.javadoc.io/static/org.typelevel/cats-core_3/@VERSION@/cats/Apply.html#productL-fffffeeb) | Adds effect iff condition is false
 
 ### FlatMap
 
-| Type          | Method Name | Symbol
-| ------------- |---------------|
+| Type          | Method Name   | Symbol |
+| ------------- |---------------|--------|
 | `F[F[A]] => F[A]` | `[flatten]`  |
 | `F[A] => (A => F[B]) => F[B]` | `[flatMap]` | `>>=`
 | `F[A] => (A => F[B]) => F[(A,B)]` | `[mproduct]`
